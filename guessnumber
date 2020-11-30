@@ -1,0 +1,24 @@
+#If the user has not guessed the right answer, enter the loop.
+#Ask the user for a guess.
+#Is the guess the right number?
+#If the right guess, tell the user it was the right guess and exit the loop.
+#If the wrong guess, tell the user it was the wrong guess and continue the loop.
+
+import random
+
+print("welcome to Guess The Number!")
+print("The rules are simple. I will think of a number and try to guess it.!")
+      
+number = random.randint(1,10) 
+
+isGuessRight = False 
+
+while isGuessRight != True: 
+    guess = input("Guess a number between 1 and 10: ")
+    if int(guess) == number: 
+        print("You guess {}. This is right! You Win!".format(guess))
+        isGuessRight = True
+        
+    else:
+         print("You guessed {}. sorry, that isn't it. Try again.".format(guess))
+            
